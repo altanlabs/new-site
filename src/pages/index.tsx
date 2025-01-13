@@ -6,6 +6,7 @@ import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Avatar } from "../components/ui/avatar";
+import { Link } from "react-router-dom";
 
 function Index() {
   const { theme, setTheme } = useTheme();
@@ -60,6 +61,8 @@ function Index() {
           <Input type="text" placeholder="Preferred Date & Time" className="p-2 border rounded" />
           <Button type="submit" className="bg-blue-500 text-white p-2 rounded">Schedule</Button>
         </form>
+
+        <Link to="/login" className="text-blue-500 hover:underline mt-4">Login</Link>
       </section>
 
       <footer className="w-full p-4 bg-blue-600 text-white text-center">
