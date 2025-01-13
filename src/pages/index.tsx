@@ -18,7 +18,7 @@ function Index() {
     <main className={`h-screen w-full ${theme === 'dark' ? 'bg-neutral-950 text-white' : 'bg-white text-black'} flex flex-col items-center`}>
       <header className="w-full p-4 flex justify-between items-center bg-blue-600 text-white">
         <div className="flex items-center gap-4">
-          <Avatar className="bg-white text-blue-600" size="lg">SS</Avatar>
+          <Avatar className="bg-white text-blue-600">SS</Avatar>
           <h1 className="text-2xl font-bold">SERGI SA</h1>
         </div>
         <Toggle
