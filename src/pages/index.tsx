@@ -2,6 +2,8 @@ import "@radix-ui/themes/styles.css";
 import { Toggle } from '@radix-ui/react-toggle';
 import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
 import { useTheme } from "../hooks/use-theme";
+import { Input } from "../components/ui/input";
+import { Button } from "../components/ui/button";
 
 function Index() {
   const { theme, setTheme } = useTheme();
@@ -13,8 +15,14 @@ function Index() {
   return (
     <main className={`h-screen w-full ${theme === 'dark' ? 'bg-neutral-950 text-white' : 'bg-white text-black'} flex items-center justify-center`}>
       <div className="flex flex-col items-center gap-12">
-        <h1 className="text-4xl font-light">Welcome to your app</h1>
-        <p className="text-neutral-400">Start chatting to edit</p>
+        <h1 className="text-4xl font-light">Welcome to SERGI SA</h1>
+        <p className="text-neutral-400">We specialize in AI consultancy and process automation.</p>
+        <form className="flex flex-col gap-4">
+          <Input type="text" placeholder="Your Name" className="p-2 border rounded" />
+          <Input type="email" placeholder="Your Email" className="p-2 border rounded" />
+          <Input type="text" placeholder="Preferred Date & Time" className="p-2 border rounded" />
+          <Button type="submit" className="bg-blue-500 text-white p-2 rounded">Schedule a Meeting</Button>
+        </form>
         <Toggle
           pressed={theme === 'dark'}
           onPressedChange={toggleTheme}
