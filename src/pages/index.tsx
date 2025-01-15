@@ -80,9 +80,14 @@ function Index() {
         </div>
       </header>
 
+      <section className="w-full h-64 bg-cover bg-center mb-8" style={{ backgroundImage: 'url(https://source.unsplash.com/1600x900/?artificial-intelligence)' }}>
+        <div className="w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+          <h2 className="text-4xl font-bold text-white">{langContent.welcome}</h2>
+        </div>
+      </section>
+
       <section className="flex-1 flex flex-col items-center justify-center gap-8 p-8">
         <Card className="max-w-2xl p-6 shadow-lg">
-          <h2 className="text-3xl font-semibold mb-4">{langContent.welcome}</h2>
           <p className="text-lg mb-4">
             {langContent.description}
           </p>
